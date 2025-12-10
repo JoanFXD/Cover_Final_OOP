@@ -47,11 +47,16 @@ public class Workshop {
         // TODO: Implementar el método para calcular el factorial de un número entero.
         // Ejemplo: Si n = 5, el resultado debería ser 120.
         // Lanzar IllegalArgumentException si n es negativo.
-        int factor = 0;
-        int factorial = 0;
-        for (int i = 1; i <= n-1; i++) {
-            factorial = i * (i+1);
+        int factorial = 1;
+        for (int i = 1; i <= n; i++) {
+            factorial *= i;
 
+        }
+        if (n==0){
+            factorial = 1;
+        }
+        if (n<=-1){
+            throw new IllegalArgumentException("El número no puede ser negativo.");
         }
         return factorial;
     }
