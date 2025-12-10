@@ -9,21 +9,37 @@ public class Workshop {
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
         // Ejemplo: Si a = 3 y b = 5, el resultado debería ser 8.
-        return a+b;
+        int suma = a + b;
+        return suma;
     }
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
         // TODO: Implementar el método para retornar el mayor de los tres números enteros.
         // Ejemplo: Si a = 3, b = 7, y c = 5, el resultado debería ser 7.
-        return 0;
+        int comp = 0;
+        if (b>a & b>c ) {
+            comp = b;
+        }
+        if (a>b & a>c){
+            comp = a;
+        }
+        if (c>b & c>a){
+            comp = c;
+        }
+
+        return comp;
     }
 
     // Método que retorna la tabla de multiplicar de un número
     public int[] tablaMultiplicar(int numero, int limite) {
         // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
         // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
-        return new int[0];
+        int[] tabla = new int [limite]   ;
+        for (int i = 0; i < limite; i++) {
+            tabla[i] = numero*(i+1);
+        }
+        return tabla;
     }
 
     // Método que calcula el factorial de un número entero
@@ -31,7 +47,13 @@ public class Workshop {
         // TODO: Implementar el método para calcular el factorial de un número entero.
         // Ejemplo: Si n = 5, el resultado debería ser 120.
         // Lanzar IllegalArgumentException si n es negativo.
-        return 0;
+        int factor = 0;
+        int factorial = 0;
+        for (int i = 1; i <= n-1; i++) {
+            factorial = i * (i+1);
+
+        }
+        return factorial;
     }
 
     // Método que verifica si un número es primo
